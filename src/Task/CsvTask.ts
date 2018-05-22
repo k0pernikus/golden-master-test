@@ -3,7 +3,7 @@ import {SomeApiPost} from "../SomeApi/Interface";
 import {SomeApi} from "../SomeApi/SomeApi";
 import {ITask} from "./ITask";
 
-export class DummyTask implements ITask {
+export class CsvTask implements ITask {
     public async execute(): Promise<string> {
         const api = new SomeApi();
         const range: number[] = _.range(1, 101);

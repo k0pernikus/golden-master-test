@@ -1,6 +1,6 @@
 import {storeCsv} from "../csv/storeCsv";
 import {decorateTask} from "../Task/decorateTask";
-import {DummyTask} from "../Task/DummyTask";
+import {CsvTask} from "../Task/CsvTask";
 import {ITask} from "../Task/ITask";
 import {
     MockMode,
@@ -28,7 +28,7 @@ const mockMode: MockMode = parseMockMode(program.mockMode);
 console.log(mockMode);
 
 const run = async (): Promise<void> => {
-    const task: ITask = new DummyTask();
+    const task: ITask = new CsvTask();
     const decoratedTask = decorateTask(task, mockMode);
     const fileContent = await decoratedTask.execute();
     return storeCsv(fileContent);
