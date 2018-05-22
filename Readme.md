@@ -27,6 +27,8 @@ or:
 
     yarn task --help
 
+and follow the description.
+
 # Csv file
 
 You will find the csv file at:
