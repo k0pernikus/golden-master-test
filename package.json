@@ -5,13 +5,16 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "task": "node dist/src/bin/taskRunner.js"
+    "task": "node dist/src/bin/taskRunner.js",
+    "goldenMasterTest": "mocha dist/tests/acceptance/TaskTests.js"
   },
   "dependencies": {
     "@types/bluebird": "^3.5.20",
+    "@types/chai": "^4.1.3",
     "@types/commander": "^2.12.2",
     "@types/lodash": "^4.14.109",
     "@types/mkdirp-promise": "^5.0.0",
+    "@types/mocha": "^5.2.0",
     "@types/mz": "^0.0.32",
     "@types/nock": "^9.1.3",
     "@types/node": "^10.1.2",

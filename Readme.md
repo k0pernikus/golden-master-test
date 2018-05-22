@@ -17,24 +17,16 @@ The example uses the [json-placeholder-api](https://jsonplaceholder.typicode.com
 
 # Entrypoint
 
-    ./dist/src/bin/taskRunner.js
-
-## Running the task:
-
-    node dist/src/bin/taskRunner.js --help
-
-or:
-
     yarn task --help
 
 and follow the description.
+
+## Running as a golden master test case
+
+    yarn goldenMasterTest
 
 # Csv file
 
 You will find the csv file at:
 
     ./out/data.csv
-
-# Todo
-
-[ ] setup mocha acceptance test
