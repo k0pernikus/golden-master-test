@@ -1,4 +1,4 @@
-import mkdirp from "mkdirp-promise";
+import mkdirpPromise from "mkdirp-promise";
 import * as fs from "mz/fs";
 import {ITask} from "../ITask";
 
@@ -30,7 +30,7 @@ export class TaskMockRecorder implements ITask {
 
     private async writeRecordFile(): Promise<void> {
         const nockObjects = nock.recorder.play();
-        await mkdirp(this.basePath);
+        await mkdirpPromise(this.basePath);
         const pathToFile = `${this.basePath}/${this.fileName}`;
         const fileContent = JSON.stringify(
             nockObjects,

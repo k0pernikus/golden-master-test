@@ -8,7 +8,11 @@
         "build": "rm ./dist/* -rf && tsc",
         "task": "node dist/src/bin/taskRunner.js",
         "goldenMaster:test": "mocha dist/tests/acceptance/TaskTests.js",
-        "goldenMaster:update": "cp ./out/data.csv ./tests/acceptance/goldenMaster.csv"
+        "goldenMaster:update": "cp ./out/data.csv ./tests/acceptance/goldenMaster.csv",
+        "lint": "tslint --format verbose --project .",
+        "lint:fix": "tslint --fix --project . && yarn run pretty",
+        "pretty": "prettier --print-width 120 trailing-commas es5 --tab-width 4 --parser typescript --write \"**/*.ts\"",
+        "lint:fix-all": "yarn run pretty && yarn run lint:fix"
     },
     "dependencies": {
         "@types/bluebird": "^3.5.20",
@@ -31,9 +35,12 @@
         "mocha": "^5.2.0",
         "mz": "^2.7.0",
         "nock": "^9.2.6",
+        "prettier": "^1.13.5",
         "request": "^2.87.0",
         "request-promise": "request/request-promise",
         "tslint": "^5.10.0",
+        "tslint-config-airbnb": "^5.9.2",
+        "tslint-config-prettier": "^1.13.0",
         "typescript": "^2.8.3"
     },
     "devDependencies": {}
