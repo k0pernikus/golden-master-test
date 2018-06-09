@@ -1,13 +1,10 @@
 import nock = require("nock");
-import {ITask} from "../ITask";
+import { ITask } from "../ITask";
 
 export class TaskMockPlaybackDecorator implements ITask {
     private path: string;
 
-    public constructor(private task: ITask,
-                       basePath: string,
-                       file: string,
-    ) {
+    public constructor(private task: ITask, basePath: string, file: string) {
         this.path = `${basePath}/${file}`;
     }
 

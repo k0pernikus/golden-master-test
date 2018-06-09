@@ -1,12 +1,8 @@
-import {storeCsv} from "../csv/storeCsv";
-import {decorateTaskWithMock} from "../Task/decorateTaskWithMock";
-import {CsvTask} from "../Task/CsvTask";
-import {ITask} from "../Task/ITask";
-import {
-    MockMode,
-    mockModes,
-    parseMockMode,
-} from "../Task/NockDecorators/constants";
+import { storeCsv } from "../csv/storeCsv";
+import { decorateTaskWithMock } from "../Task/decorateTaskWithMock";
+import { CsvTask } from "../Task/CsvTask";
+import { ITask } from "../Task/ITask";
+import { MockMode, mockModes, parseMockMode } from "../Task/NockDecorators/constants";
 
 console.log(mockModes.join(", "));
 
@@ -15,11 +11,7 @@ const program = require("commander");
 program
     .version("1.0.0")
     .description("Task runner. Consumes a restful API and constructs a CSV file out of them")
-    .option(
-        "-m, --mock-mode [mock]",
-        "use the pre-recorded mocks",
-        "none",
-    );
+    .option("-m, --mock-mode [mock]", "use the pre-recorded mocks", "none");
 
 program.parse(process.argv);
 

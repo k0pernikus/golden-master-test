@@ -1,7 +1,7 @@
-import {ITask} from "./ITask";
-import {MockMode} from "./NockDecorators/constants";
-import {TaskMockPlaybackDecorator} from "./NockDecorators/TapePlaybackTaskDecorator";
-import {TaskMockRecorder} from "./NockDecorators/TapeRecorderTaskDecorator";
+import { ITask } from "./ITask";
+import { MockMode } from "./NockDecorators/constants";
+import { TaskMockPlaybackDecorator } from "./NockDecorators/TapePlaybackTaskDecorator";
+import { TaskMockRecorder } from "./NockDecorators/TapeRecorderTaskDecorator";
 
 export const decorateTaskWithMock = (task: ITask, mockMode: MockMode): ITask => {
     const path = "./tapes";

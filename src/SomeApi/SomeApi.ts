@@ -1,4 +1,4 @@
-import {SomeApiPost} from "./Interface";
+import { SomeApiPost } from "./Interface";
 
 const rp = require("request-promise");
 
@@ -7,6 +7,6 @@ export class SomeApi {
 
     public async fetchPost(id: number): Promise<SomeApiPost> {
         const uri = this.postEndpoint + id;
-        return rp.get({uri, json: true});
+        return rp.get({ uri, json: true });
     }
 }

@@ -1,7 +1,7 @@
-import {expect} from "chai";
+import { expect } from "chai";
 import * as fs from "mz/fs";
-import {CsvTask} from "../../src/Task/CsvTask";
-import {decorateTaskWithMock} from "../../src/Task/decorateTaskWithMock";
+import { CsvTask } from "../../src/Task/CsvTask";
+import { decorateTaskWithMock } from "../../src/Task/decorateTaskWithMock";
 
 describe("Csv Task", async () => {
     it("should generate a csv file matching the golden master", async () => {
