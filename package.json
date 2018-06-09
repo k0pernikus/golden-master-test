@@ -5,6 +5,7 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
+        "build": "rm ./dist/* -rf && tsc",
         "task": "node dist/src/bin/taskRunner.js",
         "goldenMaster:test": "mocha dist/tests/acceptance/TaskTests.js",
         "goldenMaster:update": "cp ./out/data.csv ./tests/acceptance/goldenMaster.csv"

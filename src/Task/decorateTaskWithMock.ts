@@ -3,7 +3,7 @@ import {MockMode} from "./NockDecorators/constants";
 import {TaskMockPlaybackDecorator} from "./NockDecorators/TapePlaybackTaskDecorator";
 import {TaskMockRecorder} from "./NockDecorators/TapeRecorderTaskDecorator";
 
-export const decorateTask = (task: ITask, mockMode: MockMode): ITask => {
+export const decorateTaskWithMock = (task: ITask, mockMode: MockMode): ITask => {
     const path = "./tapes";
     const file = "recording.json";
 
