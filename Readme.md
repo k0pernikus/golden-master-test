@@ -2,7 +2,7 @@
 
 ## About
 
-Code example for my hhjs talk about generating Golden Master Test with the help of nock.
+Code example for my [hhjs talk](https://docs.google.com/presentation/d/1QLo0XHMYilGMWp-QzoCu54xaDItSPMNLzZxUHTwagtQ/edit?usp=sharing) about generating Golden Master Test with the help of nock.
 
 The example uses the [json-placeholder-api](https://jsonplaceholder.typicode.com/), it fetches each post and creates a csv file containing the id and tile. The example is a bit contrived and simplistic to focus on the golden master test setup.
 
@@ -10,6 +10,8 @@ The example uses the [json-placeholder-api](https://jsonplaceholder.typicode.com
 
 - node8
 - yarn
+
+The project is written in typescript. The generated js files will be in the `./dist` folder, and the `src` folder contains the actual project.
 
 # Getting started
 
