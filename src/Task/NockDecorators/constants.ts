@@ -9,7 +9,7 @@ export const parseMockMode = (rawMockMode: string): MockMode => {
     }
 
     const modes = mockModes.join(", ");
-    const errorMsg = `Invalid mockmode provided, use one of these: ${modes}`;
+    const errorMsg = `Invalid mock mode provided, use one of these: ${modes}`;
 
     throw new Error(errorMsg);
 };
