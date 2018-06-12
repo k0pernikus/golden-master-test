@@ -1,12 +1,12 @@
-import * as _ from "lodash/fp";
 import { SomeApiPost } from "../SomeApi/Interface";
 import { SomeApi } from "../SomeApi/SomeApi";
+import { getRange } from "../util/getRange";
 import { ITask } from "./ITask";
 
 export class CsvTask implements ITask {
     public async execute(): Promise<string> {
         const api = new SomeApi();
-        const range: number[] = _.range(1, 101);
+        const range: number[] = getRange(1, 100, true);
 
         const promises = range.map(i => {
             return api.fetchPost(i);

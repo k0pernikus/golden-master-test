@@ -8,7 +8,7 @@
         "build": "rm ./dist/* -rf && tsc",
         "task": "node dist/src/bin/taskRunner.js",
         "goldenMaster:test": "mocha dist/tests/acceptance/TaskTests.js",
-        "goldenMaster:update": "cp ./out/data.csv ./tests/acceptance/goldenMaster.csv",
+        "goldenMaster:update": "yarn run task && cp ./out/data.csv ./tests/acceptance/goldenMaster.csv",
         "tslint": "tslint --format verbose --project .",
         "tslint:fix": "tslint --fix --project . && yarn run pretty",
         "pretty": "prettier --print-width 120 trailing-commas es5 --tab-width 4 --parser typescript --write \"**/*.ts\"",
